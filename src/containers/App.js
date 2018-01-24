@@ -1,5 +1,12 @@
 import React from 'react'
+import ShowListContainer from './ShowListContainer'
 
-const App = () => <div className="App">TVShows</div>
+const App = () => {
+  return (
+    <div className="App">
+      <ShowListContainer />
+    </div>
+  )
+}
 
 export default App
