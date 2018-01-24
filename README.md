@@ -7,9 +7,13 @@
 The main purpose of this app is to utilize cool new technologies and ideas.
 In another hand, this app can show additional information about TV Shows like date of air, popular shows etc.
 
-You can use it free at [tvshows-d6e13.firebaseapp.com](https://tvshows-d6e13.firebaseapp.com)
-
 ## Project Setup
+
+Currently this app use MongoDB. 
+* install it from `brew` like: `brew install mongodb`
+* start mongodb service: `brew services start mongodb`
+* check out if service has beed started: `brew services list`
+
 
 ## Roadmap
 
