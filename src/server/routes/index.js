@@ -19,14 +19,14 @@ router
     newShow.text = req.body.text
     newShow.save(error => {
       if (error) res.send(error)
-      res.json({ message: 'Show successfully added!' })
+      res.json({ newShow, message: 'Show successfully added!' })
     })
   })
 
 router.route('/shows/:show_id').delete((request, response) => {
-  Show.remove({ _id: request.params.show_id }, (error, comment) => {
+  Show.deleteOne({ _id: request.params.show_id }, (error, result) => {
     if (error) response.send(error)
-    response.json({ message: 'Show has beed deleted' })
+    response.json({ result, message: 'Show has beed deleted' })
   })
 })
 

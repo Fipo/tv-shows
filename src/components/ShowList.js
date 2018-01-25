@@ -2,9 +2,9 @@ import React from 'react'
 
 const ShowList = props => (
   <div>
-    {props.shows.map(show => (
+    {props.shows.map((show, index) => (
       <div key={show._id}>
-        {show.author}: {show.text}
+        {index} {show.author}: {show.text}
         <button onClick={() => props.handleDeleteShow(show._id)}>x</button>
       </div>
     ))}
