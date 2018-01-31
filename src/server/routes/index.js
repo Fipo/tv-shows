@@ -13,10 +13,9 @@ router
     })
   })
   .post(function(req, res) {
-    const newShow = new Show()
+    const { author, text } = req.body
+    const newShow = new Show({ author, text })
 
-    newShow.author = req.body.author
-    newShow.text = req.body.text
     newShow.save(error => {
       if (error) res.send(error)
       res.json({ newShow, message: 'Show successfully added!' })
